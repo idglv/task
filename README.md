@@ -1,5 +1,5 @@
 # task
-git clone
+git clone https://github.com/idglv/task.git
 
 npm install
 
