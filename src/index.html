@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mail.ru task</title>
+    </head>
+
+    <body>
+        <div class="main-layout">
+            <form class="phone-form">
+                <div class="phone-form-row">
+                        <label class="phone-form-layout">
+                            <div class="form-label">Номер телефона</div>
+                            <div class="form-input">
+                                <div class="phone__item">
+                                    <div class="phone__separator">+7 |</div>
+                                </div>
+                                <div class="phone__item" data-rel="phone__code">
+                                    <input tabindex="1" name="phone-code" placeholder="123" type="text" autocomplete="off" class="input phone__code" pattern="[0-9]{3}"
+                                    data-mask="   " required>
+                                </div>
+                                <div class="phone__item">
+                                    <div class="phone__separator">|</div>
+                                </div>
+                                <div class="phone__item" data-rel="phone__number">
+                                    <input tabindex="2" name="phone-number" placeholder="345-67-89" type="text" autocomplete="off" class="input phone__number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                    data-mask="   -  -  " required>
+                                </div>
+                            </div>
+                        </label>
+                        <label class="phone-form-layout">
+                            <div class="form-label">Сумма пополнения</div>
+                            <div class="form-input">
+                                <div class="phone__item" data-rel="money-input">
+                                    <input tabindex="3" placeholder="0" name="money" type="text" maxlength="4" autocomplete="off" class="input money-input" tabindex="2" data-min="1" data-max="5000" required>
+                                </div>
+                                <div class="phone__item" data-rel="money-text"></div>
+                            </div>
+                        </label>
+                </div>
+                <div class="phone-form-row">
+                    <div class="button-submit-container"></div>
+                </div>
+            </form>
+        </div>
+        <script src="bundle.js"></script>
+    </body>
+
+</html>
