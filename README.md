@@ -5,4 +5,4 @@ npm install
 
 npm start
 
-localhost:8080/dist
+localhost:8080
