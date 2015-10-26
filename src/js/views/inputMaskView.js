@@ -39,7 +39,7 @@ module.exports = Backbone.View.extend({
     }.bind(this), '');
 
     this.model.set('value', result);
-    if (this.tabindex === 1) {
+    if (!this.$prev.length) {
       this.$next.trigger('custompaste', value.slice(this.allowLength, value.length));
       this.$next.focus();
     }
