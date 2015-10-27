@@ -76,14 +76,16 @@ module.exports = Backbone.View.extend({
   },
   handleInputPaste: function(e) {
     var exceptNumber = /\D/g;
+    //После того как оставили только числа +7 -> 7
+    var phone = /^(7|8)?(\d{10})/;
     this.$input.val('');
     setTimeout(function() {
       //Оставляем только цифры
       var value = this.$input.val().replace(exceptNumber, '');
       var result;
-      if (value.length) {
+      if (value.length && phone.test(value)) {
         //Количество символов в номере
-        value = value.slice(0, 10);
+        value = value.replace(phone, '$2');
         //Если есть предыдущий инпут делаем вставку в него
         if (this.$prev.length) {
           this.$prev.trigger('custompaste', value);
